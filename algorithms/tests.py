@@ -15,3 +15,6 @@ class TestSort(TestCase):
 
     def test_quick_sort(self):
         self.bench(sort.quick_sort)
+
+    def test_merge_sort(self):
+        self.bench(sort.merge_sort)
