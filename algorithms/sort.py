@@ -3,6 +3,23 @@ from typing import List
 from copy import copy
 
 
+def insertion_sort(data):
+    data = copy(data)
+
+    def insert(data, pos, val):
+        i = pos - 1
+
+        while i >= 0 and data[i] > val:
+            data[i+1] = data[i]
+            i -= 1
+        data[i+1] = val
+
+    for i in range(1, len(data)):
+        insert(data, i, data[i])
+
+    return data
+
+
 def bubble_sort(data: List) -> List:
     data = copy(data)
 
